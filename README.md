@@ -1,6 +1,6 @@
-# Appendix A. AI System
+# AI Agential System
 
-As previously discussed, an AI agential system was built and deployed both on the Hive machine and also running locally on my kali VM. The framework I used to build and develop the system was Google ADK. This open-source framework allows the deployment of easy multi-level agent orchestration applications and allows for creation and use of bespoke tools as well as the incorporation of pre-built tools by Google’s ADK team.
+This AI agential system was built and deployed both on the Hive machine and also running locally on my kali VM. The framework I used to build and develop the system was Google ADK. This open-source framework allows the deployment of easy multi-level agent orchestration applications and allows for creation and use of bespoke tools as well as the incorporation of pre-built tools by Google’s ADK team.
 
 ## Deployment
 
