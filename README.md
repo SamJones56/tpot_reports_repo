@@ -1,12 +1,12 @@
-## AI Agential System
+# Appendix A. AI System
 
-An AI agential system was built and deployed both on the Hive machine and also running locally on my kali VM. The framework I used to build and develop the system was Google ADK. This open-source framework allows the deployment of easy multi-level agent orchestration applications and allows for creation and use of bespoke tools as well as the incorporation of pre-built tools by Google’s ADK team.
+As previously discussed, an AI agential system was built and deployed both on the Hive machine and also running locally on my kali VM. The framework I used to build and develop the system was Google ADK. This open-source framework allows the deployment of easy multi-level agent orchestration applications and allows for creation and use of bespoke tools as well as the incorporation of pre-built tools by Google’s ADK team.
 
 ## Deployment
 
 ### Hive
 
-Due to the volume of traffic received on the hive in order to generate reports with sufficient granularity an hourly report was ran on the Hive cloud instance. On the hour a cronjob was executed calling the local agent to generate an hourly report. This hourly report was then saved to the “/summaries” file locally on the Hive cloud VM.
+Due to the volume of traffic received on the hive in order to generate reports with sufficient granularity an hourly report was ran on the Hive cloud instance. On the hour a cronjob was executed calling the local agent to generate an hourly report. This hourly report was then saved to the “/summaries” file locally on the Hive cloud VM. 
 
 ### Local VM
 
@@ -43,6 +43,8 @@ Pairing the web interface with the application allows for users to interact with
 
 **Figure 2** Querying the Agent's Capabilities on Local VM  
 ![Figure 2](./images/Picture2.png)
+![Figure 3](./images/Picture3.png)
+![Figure 4](./images/Picture4.png)
 
 ---
 
@@ -54,11 +56,11 @@ For the Kibana dashboard queries, the queries were taken and the key variables l
 
 The other live-query tools allowed for the AI agents to execute their own semi-custom and custom queries. These were “custom_basic_search”, “custom_nested_search”, “kibanna_discover_query”, “suricata_lenient_phrase_search” and “complete_custom_search”. These queries had a higher error rate due to their open nature but also allowed the agents to carry out more specific searches and stray away from the set Kibana queries.
 
-**Figure 3** Instance of Lenient Custom Live Query  
-![Figure 3](./images/Picture3.png)
+**Figure 5** Instance of Lenient Custom Live Query  
+![Figure 5](./images/Picture5.png)
 
-**Figure 4** Agent/Toolset Tree  
-![Figure 4](./images/Picture4.png)
+**Figure 6** Agent/Toolset Tree  
+![Figure 6](./images/Picture6.png)
 
 ---
 
@@ -66,10 +68,8 @@ The other live-query tools allowed for the AI agents to execute their own semi-c
 
 LLM’s and Gen-AI tend to hallucinate data when prompted, to counteract this a second mirror agent was deployed with the same toolset but with specific instructions to act as a fact checker/validator against data received. To achieve this when a user prompts the application for a live query, the root agent passes the query to the “query_agent”, this agent/user then works through prompt(s) and returns the data/report generated to the root agent. This data/report is then fed into the “fact_check_agent” who performs all necessary searches both against the database and with google to confirm or deny claims made by its sister agent.
 
-**Figure 5** Validation Diagram  
-![Figure 5](./images/Picture5.png)
+**Figure 7** Validation Diagram  
+![Figure 7](./images/Picture7.png)
 
-**Figure 6** Sample ADK Web Interaction  
-![Figure 6](./images/Picture6.png)
-
-
+**Figure 8** Sample ADK Web Interaction  
+![Figure 8](./images/Picture8.png)
