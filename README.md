@@ -1,4 +1,4 @@
-AI Agential System
+## AI Agential System
 
 An AI agential system was built and deployed both on the Hive machine and also running locally on my kali VM. The framework I used to build and develop the system was Google ADK. This open-source framework allows the deployment of easy multi-level agent orchestration applications and allows for creation and use of bespoke tools as well as the incorporation of pre-built tools by Google’s ADK team.
 
@@ -71,4 +71,5 @@ LLM’s and Gen-AI tend to hallucinate data when prompted, to counteract this a 
 
 **Figure 6** Sample ADK Web Interaction  
 ![Figure 6](./images/Picture6.png)
+
 
